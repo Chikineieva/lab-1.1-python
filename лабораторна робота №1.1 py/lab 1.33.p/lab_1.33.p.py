@@ -1,0 +1,16 @@
+from module1 import*
+file1 = open('text1.txt','a+')
+print("введіть текстовий файл:\n")
+file1.write(text())
+file1.seek(0)
+print("введений текстовий файл:")
+print(file1.read())
+file1.seek(0)
+file2 = open('text2.txt','a+')
+#створення нового файлу
+new_file(file1, file2)
+file2.seek(0)
+print("новий текстовий файл, утворений на основі введеного:")
+print(file2.read())
+file1.close()
+file2.close()
